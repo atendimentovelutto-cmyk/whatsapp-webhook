@@ -4,11 +4,7 @@ app.use(express.json());
 
 // Rota para validar webhook com o Meta
 app.get("/webhook", (req, res) => {
-<<<<<<< HEAD
   const verify_token = "velutto123"; // troque por um token que você inventar
-=======
-  const verify_token = "MEU_TOKEN_SECRETO"; // troque por um token que você inventar
->>>>>>> cea182dbabfbe7a4aaa45235e7e15b2997de1df5
 
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
@@ -27,13 +23,8 @@ app.post("/webhook", (req, res) => {
   res.sendStatus(200); // confirma recebimento para o WhatsApp
 });
 
-<<<<<<< HEAD
 
 // Inicia servidor na porta definida pelo Render ou 3000 localmente
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
-=======
-// Inicia servidor na porta 3000
-app.listen(3000, () => console.log("Servidor rodando na porta 3000"));
->>>>>>> cea182dbabfbe7a4aaa45235e7e15b2997de1df5
